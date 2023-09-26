@@ -1,0 +1,3 @@
+echo "thy start"; clear; make -f Makefile.libnx; \
+(cd dist && cd libnx && clear && echo "LETSAGO:/" && cp *.a ../../retroarch && echo "libnx .a files copied to retroarch dir"; cd ../../retroarch && echo "moved from dist/libnx/ to retroarch/" && echo "STEP 1 COMPLETED";) && \
+(for i in *.a; do mkdir poo && echo "bak dir madE"; mv retroarch_switch.* poo && echo "retroarch_switch old poo'd"; cp "$i" "$i".bak && echo "$i bak'd" && mv "$i" libretro_libnx.a && echo "$i libnx'd" && make -f Makefile.libnx && echo "$i done" && mv retroarch_switch.nro "$i".nro && echo "$i nro'd"; echo "urbitch"; done;);
